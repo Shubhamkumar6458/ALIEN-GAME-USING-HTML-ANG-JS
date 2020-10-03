@@ -4,9 +4,7 @@
 </head>
 
 <body>
-
-	<canvas style="margin-top:30px;display: block ;padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;" id="myCanvas" width="520" height="520">
-		
+	<canvas style="margin-top:30px;display: block ;padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;" id="myCanvas" width="520" height="520">	
 	</canvas>
 	<br>
 	<marquee>Mission&#127894;&#65039;Helix</marquee>
@@ -15,9 +13,7 @@
 
 	<script>
 		
-		// Adding fire 
-		// Generate in 300 ms
-		// Add in update 
+	
 
 		var canvas = document.getElementById("myCanvas");
 		var ctx = canvas.getContext("2d");
@@ -25,11 +21,11 @@
 		var counter = 0;
 
 		function drawObject(object){
-			//Find current index of image to be used.
+
 			var currentImageIndex = counter%object.images.length;
-			//Access image from array of images
+
 			var currentImage = object.images[currentImageIndex];
-			//Draw of canvas
+
 			ctx.drawImage(currentImage,object.x-(object.width/2),object.y-(object.height/2),object.width,object.height);
 		}
 
@@ -186,7 +182,7 @@
 																				} 
 																			}
 		};
-
+//file by hrx
 		//step 2
 		function handleKey(event, status) {
 			var currentController = keyMap[event.keyCode];
@@ -267,6 +263,7 @@
 				}
 			}
 		}
+		
 
 		setInterval(update,50);
 
